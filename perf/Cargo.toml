@@ -21,7 +21,7 @@ fnv = "1.0.7"
 log = "0.4.14"
 rand = "0.7.0"
 rayon = "1.5.1"
-serde = "1.0.130"
+serde = "1.0.136"
 solana-bloom = { path = "../bloom", version = "=1.9.13" }
 solana-logger = { path = "../logger", version = "=1.9.13" }
 solana-metrics = { path = "../metrics", version = "=1.9.13" }
