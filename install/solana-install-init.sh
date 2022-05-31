@@ -16,9 +16,9 @@
 { # this ensures the entire script is downloaded #
 
 if [ -z "$SOLANA_DOWNLOAD_ROOT" ]; then
-    SOLANA_DOWNLOAD_ROOT="https://github.com/solana-labs/solana/releases/download/"
+    SOLANA_DOWNLOAD_ROOT="https://github.com/salmanbao/alienloop/releases/download"
 fi
-GH_LATEST_RELEASE="https://api.github.com/repos/solana-labs/solana/releases/latest"
+GH_LATEST_RELEASE="https://api.github.com/repos/salmanbao/alienloop/releases/latest"
 
 set -e
 
@@ -100,8 +100,8 @@ main() {
         err 'Unable to figure latest release'
       fi
     fi
-
     download_url="$SOLANA_DOWNLOAD_ROOT/$release/solana-install-init-$TARGET"
+    echo $download_url
     solana_install_init="$temp_dir/solana-install-init"
 
     printf 'downloading %s installer\n' "$release" 1>&2
