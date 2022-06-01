@@ -1,6 +1,6 @@
 [package]
 name = "solana-perf"
-version = "1.9.13"
+version = "1.10.0"
 description = "Solana Performance APIs"
 authors = ["Solana Maintainers <maintainers@solana.foundation>"]
 repository = "https://github.com/solana-labs/solana"
@@ -19,15 +19,15 @@ lazy_static = "1.4.0"
 bv = { version = "0.11.1", features = ["serde"] }
 fnv = "1.0.7"
 log = "0.4.14"
-rand = "0.7.0"
+rand = "0.8.5"
 rayon = "1.5.1"
 serde = "1.0.130"
-solana-bloom = { path = "../bloom", version = "=1.9.13" }
-solana-logger = { path = "../logger", version = "=1.9.13" }
-solana-metrics = { path = "../metrics", version = "=1.9.13" }
-solana-sdk = { path = "../sdk", version = "=1.9.13" }
-solana-vote-program = { path = "../programs/vote", version = "=1.9.13" }
-solana-rayon-threadlimit = { path = "../rayon-threadlimit", version = "=1.9.13" }
+solana-bloom = { path = "../bloom", version = "=1.10.0" }
+solana-logger = { path = "../logger", version = "=1.10.0" }
+solana-metrics = { path = "../metrics", version = "=1.10.0" }
+solana-sdk = { path = "../sdk", version = "=1.10.0" }
+solana-vote-program = { path = "../programs/vote", version = "=1.10.0" }
+solana-rayon-threadlimit = { path = "../rayon-threadlimit", version = "=1.10.0" }
 
 [target."cfg(target_os = \"linux\")".dependencies]
 caps = "0.5.3"
