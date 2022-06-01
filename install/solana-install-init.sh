@@ -1,5 +1,5 @@
-SOLANA_RELEASE=edge
-SOLANA_INSTALL_INIT_ARGS=edge
+SOLANA_RELEASE=beta
+SOLANA_INSTALL_INIT_ARGS=beta
 #!/bin/sh
 # Copyright 2016 The Rust Project Developers. See the COPYRIGHT
 # file at the top-level directory of this distribution and at
@@ -120,8 +120,8 @@ main() {
 
     if [ -z "$1" ]; then
       #shellcheck disable=SC2086
-      echo "$solana_install_init"
-      ignore "$solana_install_init" $SOLANA_INSTALL_INIT_ARGS
+      echo "$SOLANA_INSTALL_INIT_ARGS"
+      ignore "$solana_install_init" "$SOLANA_INSTALL_INIT_ARGS"
     else
       echo "$solana_install_init"
       ignore "$solana_install_init" "$@"
