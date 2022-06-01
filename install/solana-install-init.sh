@@ -1,3 +1,5 @@
+SOLANA_RELEASE=edge
+SOLANA_INSTALL_INIT_ARGS=edge
 #!/bin/sh
 # Copyright 2016 The Rust Project Developers. See the COPYRIGHT
 # file at the top-level directory of this distribution and at
@@ -100,6 +102,7 @@ main() {
         err 'Unable to figure latest release'
       fi
     fi
+    echo $release
     download_url="$SOLANA_DOWNLOAD_ROOT/$release/solana-install-init-$TARGET"
     echo $download_url
     solana_install_init="$temp_dir/solana-install-init"
@@ -117,8 +120,10 @@ main() {
 
     if [ -z "$1" ]; then
       #shellcheck disable=SC2086
+      echo "$solana_install_init"
       ignore "$solana_install_init" $SOLANA_INSTALL_INIT_ARGS
     else
+      echo "$solana_install_init"
       ignore "$solana_install_init" "$@"
     fi
     retval=$?

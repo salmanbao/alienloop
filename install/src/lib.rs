@@ -64,7 +64,7 @@ fn handle_init(matches: &ArgMatches<'_>, config_file: &str) -> Result<(), String
     let data_dir = matches.value_of("data_dir").unwrap();
     let no_modify_path = matches.is_present("no_modify_path");
     let explicit_release = explicit_release_of(matches, "explicit_release");
-
+    println!("{:?}",explicit_release);
     if update_manifest_pubkey.is_none() && explicit_release.is_none() {
         Err(format!(
             "Please specify the release to install for {}.  See --help for more",
